@@ -57,6 +57,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/PopularMovieStage1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e4f4d3277db6f3117d0a0de235dfdc3c8ec3b3fe">
+        <dex dex="/Users/ctyeung/Documents/Udacity/PopularMovieStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5d67cf32add3dd86b2d1789f99a2240746567c94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/ctyeung/.android/build-cache/59733159564383663c5cd97c9085892e405c60ce/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -144,6 +153,15 @@
         revision="25.0.2"
         sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
         <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3256d96f0d69a0e275bc12a2e587a7b5149d62e1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/PopularMovieStage1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/ctyeung/Documents/Udacity/PopularMovieStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_668f8d532c5152d092cc960428d5a15f28666824/classes.dex" />
     </item>
     <item
         is-multidex="true"

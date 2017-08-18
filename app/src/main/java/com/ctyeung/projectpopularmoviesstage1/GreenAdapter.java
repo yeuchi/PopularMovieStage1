@@ -173,7 +173,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         return viewHolder;
     }
 
-    protected  JSONObject parseJsonFromArray(JSONArray jsonArray, int index)
+    public  JSONObject parseJsonFromArray(JSONArray jsonArray, int index)
     {
         JSONObject json = null;
 

@@ -30,7 +30,7 @@ import java.util.Scanner;
 public class NetworkUtils {
 
     final static String BASE_URL = "http://api.themoviedb.org/3/movie/popular";
-    final static String API_KEY_VALUE = "my key from account here !!! ";
+    final static String API_KEY_VALUE = "my api key here !!!!";
     final static String PARAM_API_KEY = "api_key";
 
     /**
