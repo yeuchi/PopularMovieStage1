@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_690c9e28d32ed05cecf6f90c4718d323c74915ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_6173fe07444f021ac98cd84a469aa56596c085fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_690c9e28d32ed05cecf6f90c4718d323c74915ba/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/07afc31392cea056f91feb4efb351ce7f277e903/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c673780c1fdd70ee55ac4361c7fbdd03f21c5dd7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/c85ba619f7cf4d694b930598145e7d9b38ebd8f1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b136077b39dfca7203bc6c2fb38db6acada5ecf4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_edec27aaeabd876ec32f56cd836052aaa70cbfef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/59733159564383663c5cd97c9085892e405c60ce/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_495d8d05248dbde19516a4c01e9e50a773b97a2e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/d4c900b5c4d2ee63d8f6e75d66d8d00d896268fb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_69f9073e5f0024bf08a4f53021d631544a75f202/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/d7b3b42a94f7472c65d2d24aac319bfece0f6b71/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f4d34e38501bfe5b21bf061159db5e74a8066382/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7bbd56c89bba7d27bf3c41ae3f5f44d336f4c9be">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_afbb08620fe740c911e3b7d9534792da6ff3fc42/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/416dc3cef1ef15b785dfb22f120aa456158d023c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b523ee7393764deb6fe55fe79bd77216ffa3dc20/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/d16206f2dbbc4937f6bd9080ac227ba23fbc3ed2/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2b300e35c8240df42d91b7b8ff84ade436d487f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="c8d7ad0b66aa987019390c283d341b387a5f2ff6">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_afbb08620fe740c911e3b7d9534792da6ff3fc42/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_aeaa206b4305a649ff01931f8cecd7760cab8199/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/b90b6e58245307c192ea01a36ef60c303ed930a1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9075de945edf187741621bd8afe58d25838c73bf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/1e8753b7d6dc2a5df814e8fa72bb3ac72460203f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3256d96f0d69a0e275bc12a2e587a7b5149d62e1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_aeaa206b4305a649ff01931f8cecd7760cab8199/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/ctyeung/.android/build-cache/1fa9d1732feaa2fc09e2546cee35cd8be94fff6b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/ctyeung/Documents/Udacity/ProjectPopularMoviesStage1/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_990278e15ec1877ca0bd95a26f5aee2c962e94e3/classes.dex" />
+    </item>
+
+</items>
