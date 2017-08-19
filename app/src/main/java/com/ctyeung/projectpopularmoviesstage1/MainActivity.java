@@ -18,6 +18,8 @@ import android.widget.Toast;
 import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 import java.io.IOException;
 import java.net.URL;
+
+import com.ctyeung.projectpopularmoviesstage1.utilities.MovieHelper;
 import com.ctyeung.projectpopularmoviesstage1.utilities.NetworkUtils;
 
 import org.json.JSONArray;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
         mNumbersList.setLayoutManager(layoutManager);
         listener = this;
 
-        requestMovie();
+        requestMovie(MovieHelper.SORT_POPULAR);
     }
 
     @Override
@@ -67,21 +69,20 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
         switch (itemId) {
 
             case R.id.sort_popular:
-               // mAdapter = new GreenAdapter(NUM_LIST_ITEMS, this);
-                // mNumbersList.setAdapter(mAdapter);
+                requestMovie(MovieHelper.SORT_POPULAR);
                 return true;
 
             case R.id.sort_top_rated:
-
+                requestMovie(MovieHelper.SORT_TOP_RATED);
                 return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
 
-    protected void requestMovie()
+    protected void requestMovie(String sortMethod)
     {
-        URL url = NetworkUtils.buildMainPageUrl();
+        URL url = NetworkUtils.buildMainPageUrl(sortMethod);
         new GithubQueryTask().execute(url);
     }
 

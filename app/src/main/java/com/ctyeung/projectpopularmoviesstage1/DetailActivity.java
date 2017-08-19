@@ -55,7 +55,7 @@ public class DetailActivity extends AppCompatActivity {
 
         Context context = getApplicationContext();
 
-        String url = MovieHelper.BASE_URL + "w500/" + parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
+        String url = MovieHelper.BASE_POSTER_URL + "w500/" + parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
         Picasso.with(context)
                 //.load("http://i.imgur.com/DvpvklR.png")
                 .load(url)

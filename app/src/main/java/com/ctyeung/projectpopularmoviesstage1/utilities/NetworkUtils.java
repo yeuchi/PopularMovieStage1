@@ -34,9 +34,10 @@ public class NetworkUtils {
      *
      * @return The URL to use to query the GitHub.
      */
-    public static URL buildMainPageUrl()
+    public static URL buildMainPageUrl(String sortMethod)
     {
-        Uri builtUri = Uri.parse(MovieHelper.POPULAR_URL)
+        String str = MovieHelper.BASE_URL + sortMethod;
+        Uri builtUri = Uri.parse(str)
                             .buildUpon()
                             .appendQueryParameter(MovieHelper.PARAM_API_KEY, MovieHelper.API_KEY_VALUE)
                             .build();
