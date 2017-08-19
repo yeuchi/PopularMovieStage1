@@ -42,20 +42,23 @@ public class DetailActivity extends AppCompatActivity {
         JSONObject json = parseJson(str);
 
         String voteAverage = parseValueByKey(json, MovieHelper.KEY_VOTE_AVERAGE);
-        tv_rating.setText(voteAverage);
+        tv_rating.setText("Vote Average: " + voteAverage);
 
         String date = parseValueByKey(json, MovieHelper.KEY_RELEASE_DATE);
-        tv_release_date.setText(date);
+        tv_release_date.setText("Date: " + date);
 
         String plot = parseValueByKey(json, MovieHelper.KEY_PLOT);
-        tvPlot.setText(plot);
+        tvPlot.setText("Plot: " + plot);
 
-        String title = parseValueByKey(json, MovieHelper.KEY_TITLE);
-        tvTitle.setText(title);
+        String title = parseValueByKey(json, MovieHelper.KEY_ORIGINAL_TITLE);
+        tvTitle.setText("Title: " + title);
 
         Context context = getApplicationContext();
 
-        String url = MovieHelper.BASE_POSTER_URL + "w500/" + parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
+        String url = MovieHelper.BASE_POSTER_URL +
+                    MovieHelper.getSizeByIndex(MovieHelper.INDEX_DETAIL) +
+                    parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
+
         Picasso.with(context)
                 //.load("http://i.imgur.com/DvpvklR.png")
                 .load(url)

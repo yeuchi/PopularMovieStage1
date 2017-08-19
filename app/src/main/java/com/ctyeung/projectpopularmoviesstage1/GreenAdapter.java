@@ -31,6 +31,7 @@ import com.squareup.picasso.Callback;
 import android.content.Context;
 import android.widget.Toast;
 import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
+import com.ctyeung.projectpopularmoviesstage1.utilities.MovieHelper;
 
 public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
@@ -39,9 +40,6 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 
 
     private static int viewHolderCount;
-    final static String BASE_URL = "http://image.tmdb.org/t/p/";
-    final static String KEY_TITLE = "title";
-    final static String KEY_POSTER_PATH = "poster_path";
     private int mNumberItems;
     private JSONArray mJsonArray;
 
@@ -68,14 +66,15 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         NumberViewHolder viewHolder = new NumberViewHolder(view);
 
         JSONObject json = JSONhelper.parseJsonFromArray(mJsonArray, viewHolderCount);
-        String title = JSONhelper.parseValueByKey(json, KEY_TITLE);
+        String title = JSONhelper.parseValueByKey(json, MovieHelper.KEY_TITLE);
 
         viewHolder.viewHolderName.setText(title);
 
         Log.d(TAG, "onCreateViewHolder: number of ViewHolders created: " + viewHolderCount);
 
-        String url = BASE_URL + getSizeByIndex(3) + JSONhelper.parseValueByKey(json, KEY_POSTER_PATH);
-
+        String url = MovieHelper.BASE_POSTER_URL +
+                MovieHelper.getSizeByIndex(MovieHelper.INDEX_THUMBNAIL) +
+                JSONhelper.parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
         Picasso.with(context)
                 .load(url)
                 .placeholder(R.drawable.placeholder)   // optional
@@ -95,34 +94,6 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         viewHolderCount++;
 
         return viewHolder;
-    }
-
-
-    protected static String getSizeByIndex(int i)
-    {
-        switch (i) {
-            case 0:
-                return "w92/";
-
-            case 1:
-                return "w154/";
-
-            default:
-            case 2:
-                return "w185/";
-
-            case 3:
-                return "w342/";
-
-            case 4:
-                return "w500/";
-
-            case 5:
-                return "w780/";
-
-            case 6:
-                return "original/";
-        }
     }
 
     /**
