@@ -29,6 +29,8 @@ import org.json.JSONObject;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Callback;
 import android.content.Context;
+import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
+
 /**
  * We couldn't come up with a good name for this class. Then, we realized
  * that this lesson is about RecyclerView.
@@ -138,8 +140,8 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         View view = inflater.inflate(layoutIdForListItem, viewGroup, shouldAttachToParentImmediately);
         NumberViewHolder viewHolder = new NumberViewHolder(view);
 
-        JSONObject json = parseJsonFromArray(mJsonArray, viewHolderCount);
-        String title = parseValueByKey(json, KEY_TITLE);
+        JSONObject json = JSONhelper.parseJsonFromArray(mJsonArray, viewHolderCount);
+        String title = JSONhelper.parseValueByKey(json, KEY_TITLE);
 
         viewHolder.viewHolderName.setText(title);
 /*
@@ -149,7 +151,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
 */
         Log.d(TAG, "onCreateViewHolder: number of ViewHolders created: " + viewHolderCount);
 
-        String url = BASE_URL + getSizeByIndex(3) + parseValueByKey(json, KEY_POSTER_PATH);
+        String url = BASE_URL + getSizeByIndex(3) + JSONhelper.parseValueByKey(json, KEY_POSTER_PATH);
 
         Picasso.with(context)
                 //.load("http://i.imgur.com/DvpvklR.png")
@@ -171,36 +173,6 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         viewHolderCount++;
 
         return viewHolder;
-    }
-
-    public  JSONObject parseJsonFromArray(JSONArray jsonArray, int index)
-    {
-        JSONObject json = null;
-
-        try
-        {
-            json = jsonArray.getJSONObject(index);
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    protected  String parseValueByKey(JSONObject json, String key)
-    {
-        String str = null;
-
-        try
-        {
-            str = json.getString(key);
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        return str;
     }
 
 

@@ -12,9 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
-
-
-
+import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 import java.io.IOException;
 import java.net.URL;
 import com.ctyeung.projectpopularmoviesstage1.utilities.NetworkUtils;
@@ -96,42 +94,13 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
             return githubSearchResults;
         }
 
-        protected JSONObject parseJson(String str)
-        {
-            JSONObject json = null;
-
-            try
-            {
-                json = new JSONObject(str);
-            }
-            catch (Exception ex)
-            {
-                ex.printStackTrace();
-            }
-            return json;
-        }
-
-        protected  JSONArray parseJsonArray(JSONObject json, String key)
-        {
-            JSONArray jsonArray = null;
-            try
-            {
-                jsonArray = json.getJSONArray("results");
-            }
-            catch (Exception ex)
-            {
-                ex.printStackTrace();
-            }
-            return jsonArray;
-        }
-
         protected void onPostExecute(String str)
         {
-            JSONObject json = parseJson(str);
+            JSONObject json = JSONhelper.parseJson(str);
 
             if(null != json)
             {
-                jsonArray = parseJsonArray(json, "results");
+                jsonArray = JSONhelper.getJsonArray(json, "results");
                 int size = jsonArray.length();
 
                 if(null!=jsonArray && size>0)
@@ -151,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
             mtoast.cancel();
 
         // launch detail activity
-        JSONObject json = mAdapter.parseJsonFromArray(jsonArray, clickItemIndex);
+        JSONObject json = JSONhelper.parseJsonFromArray(jsonArray, clickItemIndex);
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(Intent.EXTRA_TEXT, json.toString());
         startActivity(intent);
