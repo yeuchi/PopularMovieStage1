@@ -7,8 +7,19 @@
     android:layout_height="match_parent"
     tools:context="com.ctyeung.projectpopularmoviesstage1.MainActivity">
 
+    <TextView
+        android:id="@+id/tv_network_error_display"
+        android:padding="16dp"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:text="@string/network_error"/>
+
     <ProgressBar
-        android:id="@+id/progress_bar"
+        android:id="@+id/pb_display_progress"
+        android:visibility="invisible"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

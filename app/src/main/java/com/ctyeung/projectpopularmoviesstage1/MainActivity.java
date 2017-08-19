@@ -10,7 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 import java.io.IOException;
@@ -27,13 +30,19 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
     private Toast mtoast;
     private GreenAdapter.ListItemClickListener listener;
     private JSONArray jsonArray;
+    private ProgressBar mLoadingIndicator;
+    private TextView tv_network_error_display;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mNumbersList = (RecyclerView) findViewById(R.id.rv_movie);
+        mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_display_progress);
+        tv_network_error_display = (TextView) findViewById(R.id.tv_network_error_display);
+
         // LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         mNumbersList.setLayoutManager(layoutManager);
@@ -94,8 +103,16 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
             return githubSearchResults;
         }
 
+        protected void onPreExecute()
+        {
+            super.onPreExecute();
+            mLoadingIndicator.setVisibility(View.VISIBLE);
+            tv_network_error_display.setVisibility(View.INVISIBLE);
+        }
+
         protected void onPostExecute(String str)
         {
+            mLoadingIndicator.setVisibility(View.INVISIBLE);
             JSONObject json = JSONhelper.parseJson(str);
 
             if(null != json)
@@ -110,6 +127,8 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
                     mNumbersList.setHasFixedSize(true);
                 }
             }
+            else
+                tv_network_error_display.setVisibility(View.VISIBLE);
         }
     }
 
