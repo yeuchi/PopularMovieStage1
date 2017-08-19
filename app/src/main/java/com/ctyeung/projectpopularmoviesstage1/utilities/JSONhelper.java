@@ -67,13 +67,4 @@ public class JSONhelper
         }
         return str;
     }
-
-    public static JSONArray sortByPopularity(JSONArray jsonArray)
-    {
-        for(int i=0; i<jsonArray.length(); i++)
-        {
-
-        }
-        return null;
-    }
 }

@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
         mLoadingIndicator = (ProgressBar) findViewById(R.id.pb_display_progress);
         tv_network_error_display = (TextView) findViewById(R.id.tv_network_error_display);
 
-        // LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         mNumbersList.setLayoutManager(layoutManager);
         listener = this;
