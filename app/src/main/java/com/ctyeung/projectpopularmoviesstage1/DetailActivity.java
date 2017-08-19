@@ -9,17 +9,12 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+import com.ctyeung.projectpopularmoviesstage1.utilities.MovieHelper;
 
 import org.json.JSONObject;
 
 public class DetailActivity extends AppCompatActivity {
 
-    private static final String KEY_POSTER_PATH = "poster_path";
-    private static final String KEY_TITLE = "original_title";
-    private static final String KEY_PLOT = "overview";
-    private static final String KEY_RELEASE_DATE = "release_date";
-    private static final String KEY_VOTE_AVERAGE = "vote_average";
-    final static String BASE_URL = "http://image.tmdb.org/t/p/";
 
     private TextView tvTitle;
     private ImageView ivPoster;
@@ -46,21 +41,21 @@ public class DetailActivity extends AppCompatActivity {
         String str = this.getIntent().getStringExtra(Intent.EXTRA_TEXT);
         JSONObject json = parseJson(str);
 
-        String voteAverage = parseValueByKey(json, KEY_VOTE_AVERAGE);
+        String voteAverage = parseValueByKey(json, MovieHelper.KEY_VOTE_AVERAGE);
         tv_rating.setText(voteAverage);
 
-        String date = parseValueByKey(json, KEY_RELEASE_DATE);
+        String date = parseValueByKey(json, MovieHelper.KEY_RELEASE_DATE);
         tv_release_date.setText(date);
 
-        String plot = parseValueByKey(json, KEY_PLOT);
+        String plot = parseValueByKey(json, MovieHelper.KEY_PLOT);
         tvPlot.setText(plot);
 
-        String title = parseValueByKey(json, KEY_TITLE);
+        String title = parseValueByKey(json, MovieHelper.KEY_TITLE);
         tvTitle.setText(title);
 
         Context context = getApplicationContext();
 
-        String url = BASE_URL + "w500/" + parseValueByKey(json, KEY_POSTER_PATH);
+        String url = MovieHelper.BASE_URL + "w500/" + parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
         Picasso.with(context)
                 //.load("http://i.imgur.com/DvpvklR.png")
                 .load(url)

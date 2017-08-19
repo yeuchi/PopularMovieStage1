@@ -29,67 +29,15 @@ import org.json.JSONObject;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Callback;
 import android.content.Context;
+import android.widget.Toast;
 import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 
-/**
- * We couldn't come up with a good name for this class. Then, we realized
- * that this lesson is about RecyclerView.
- *
- * RecyclerView... Recycling... Saving the planet? Being green? Anyone?
- * #crickets
- *
- * Avoid unnecessary garbage collection by using RecyclerView and ViewHolders.
- *
- * If you don't like our puns, we named this Adapter GreenAdapter because its
- * contents are green.
- */
 public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
 
     private static final String TAG = GreenAdapter.class.getSimpleName();
     final private ListItemClickListener mOnClickListener;
 
-    /*
-     * The number of ViewHolders that have been created. Typically, you can figure out how many
-     * there should be by determining how many list items fit on your screen at once and add 2 to 4
-     * to that number. That isn't the exact formula, but will give you an idea of how many
-     * ViewHolders have been created to display any given RecyclerView.
-     *
-     * Here's some ASCII art to hopefully help you understand:
-     *
-     *    ViewHolders on screen:
-     *
-     *        *-----------------------------*
-     *        |         ViewHolder index: 0 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 1 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 2 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 3 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 4 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 5 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 6 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 7 |
-     *        *-----------------------------*
-     *
-     *    Extra ViewHolders (off screen)
-     *
-     *        *-----------------------------*
-     *        |         ViewHolder index: 8 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 9 |
-     *        *-----------------------------*
-     *        |         ViewHolder index: 10|
-     *        *-----------------------------*
-     *        |         ViewHolder index: 11|
-     *        *-----------------------------*
-     *
-     *    Total number of ViewHolders = 11
-     */
+
     private static int viewHolderCount;
     final static String BASE_URL = "http://image.tmdb.org/t/p/";
     final static String KEY_TITLE = "title";
@@ -97,20 +45,11 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
     private int mNumberItems;
     private JSONArray mJsonArray;
 
-    // TODO (1) Add an interface called ListItemClickListener
-    // TODO (2) Within that interface, define a void method called onListItemClick that takes an int as a parameter
     public interface ListItemClickListener
     {
         void onListItemClick(int clickItemIndex);
     }
 
-    // TODO (4) Add a ListItemClickListener as a parameter to the constructor and store it in mOnClickListener
-    /**
-     * Constructor for GreenAdapter that accepts a number of items to display and the specification
-     * for the ListItemClickListener.
-     *
-     * @param numberOfItems Number of items to display in list
-     */
     public GreenAdapter(int numberOfItems, ListItemClickListener listener, JSONArray jsonArray) {
         mJsonArray = jsonArray;
         mNumberItems = numberOfItems;
@@ -118,18 +57,6 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         viewHolderCount = 0;
     }
 
-    /**
-     *
-     * This gets called when each new ViewHolder is created. This happens when the RecyclerView
-     * is laid out. Enough ViewHolders will be created to fill the screen and allow for scrolling.
-     *
-     * @param viewGroup The ViewGroup that these ViewHolders are contained within.
-     * @param viewType  If your RecyclerView has more than one type of item (which ours doesn't) you
-     *                  can use this viewType integer to provide a different layout. See
-     *                  {@link android.support.v7.widget.RecyclerView.Adapter#getItemViewType(int)}
-     *                  for more details.
-     * @return A new NumberViewHolder that holds the View for each list item
-     */
     @Override
     public NumberViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         Context context = viewGroup.getContext();
@@ -144,29 +71,24 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         String title = JSONhelper.parseValueByKey(json, KEY_TITLE);
 
         viewHolder.viewHolderName.setText(title);
-/*
-        int backgroundColorForViewHolder = ColorUtils
-                .getViewHolderBackgroundColorFromInstance(context, viewHolderCount);
-        viewHolder.itemView.setBackgroundColor(backgroundColorForViewHolder);
-*/
+
         Log.d(TAG, "onCreateViewHolder: number of ViewHolders created: " + viewHolderCount);
 
         String url = BASE_URL + getSizeByIndex(3) + JSONhelper.parseValueByKey(json, KEY_POSTER_PATH);
 
         Picasso.with(context)
-                //.load("http://i.imgur.com/DvpvklR.png")
                 .load(url)
                 .placeholder(R.drawable.placeholder)   // optional
                 .error(R.drawable.placeholder)      // optional
                 .into(viewHolder.viewHolderImage, new Callback() {
                 @Override
                 public void onSuccess() {
-                    //Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
                 }
 
                 @Override
                 public void onError() {
-                    //Toast.makeText(getApplicationContext(), "failed", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "failed", Toast.LENGTH_SHORT).show();
                 }
         });
 
@@ -230,7 +152,6 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         return mNumberItems;
     }
 
-    // TODO (5) Implement OnClickListener in the NumberViewHolder class
     /**
      * Cache of the children views for a list item.
      */

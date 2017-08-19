@@ -11,9 +11,7 @@ public class JSONArraySort
 {
     protected JSONArray jsonArray;
     protected String key;
-    protected double min = 0;
-    protected double max = 0;
-    protected double mid = 0;
+    protected JSONArray sorted;
 
     public JSONArraySort(JSONArray jsonArray, String key)
     {
@@ -22,27 +20,45 @@ public class JSONArraySort
     }
 
     public JSONArray sort() {
-        // 1st seed object
-        JSONArray sorted = new JSONArray();
-        JSONObject first = JSONhelper.parseJsonFromArray(jsonArray, 0);
-        sorted.put(first);
-
-        // mid point value
-        String value = JSONhelper.parseValueByKey(first, key);
-        mid = Double.parseDouble(value);
+        sorted = new JSONArray();
 
         // step through all objects
-        for (int i = 1; i < jsonArray.length(); i++) {
+        for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject json = JSONhelper.parseJsonFromArray(jsonArray, i);
-            String str = JSONhelper.parseValueByKey(first, key);
+            String value = JSONhelper.parseValueByKey(json, key);
             Double num = Double.parseDouble(value);
-            bisection(num);
+            int index = bisection(num);
+            sorted.put(index);
         }
         return sorted;
     }
 
+    /*
+     * find appropriate index to insert
+     */
     protected int bisection(Double num)
     {
-        return 0;
+        int leftIndex = 0;
+        int rightIndex = jsonArray.length()-1;
+
+        while(rightIndex>leftIndex)
+        {
+            int midIndex = (rightIndex + leftIndex ) / 2;
+            JSONObject json = JSONhelper.parseJsonFromArray(jsonArray, midIndex);
+            String value = JSONhelper.parseValueByKey(json, key);
+            Double n = Double.parseDouble(value);
+
+            if(n < num)
+            {
+                leftIndex = midIndex;
+            }
+            else
+            {
+                rightIndex = midIndex;
+            }
+        }
+
+        // almost there... but not placing at the end of the list for larger value
+        return leftIndex;
     }
 }

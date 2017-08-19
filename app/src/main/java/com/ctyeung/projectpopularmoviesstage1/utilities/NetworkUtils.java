@@ -29,10 +29,6 @@ import java.util.Scanner;
  */
 public class NetworkUtils {
 
-    final static String BASE_URL = "http://api.themoviedb.org/3/movie/popular";
-    final static String API_KEY_VALUE = "you api key here !!!";
-    final static String PARAM_API_KEY = "api_key";
-
     /**
      * Builds the URL used to query GitHub.
      *
@@ -40,9 +36,9 @@ public class NetworkUtils {
      */
     public static URL buildMainPageUrl()
     {
-        Uri builtUri = Uri.parse(BASE_URL)
+        Uri builtUri = Uri.parse(MovieHelper.POPULAR_URL)
                             .buildUpon()
-                            .appendQueryParameter(PARAM_API_KEY, API_KEY_VALUE)
+                            .appendQueryParameter(MovieHelper.PARAM_API_KEY, MovieHelper.API_KEY_VALUE)
                             .build();
 
         URL url = null;
