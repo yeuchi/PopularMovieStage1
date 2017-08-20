@@ -18,9 +18,12 @@ By default (without api key) this code is expected to produced a display of prog
 With a valid api key
 1. Upon launch, present the user with an grid arrangement of movie posters
 2. Allow your user to change sort order via a setting (most popular, or by top rated)
+
+### Popular
 ![popular2](https://user-images.githubusercontent.com/1282659/29491603-745c4b32-8525-11e7-8ad9-2505fe8b2ce9.png)
 ![popular](https://user-images.githubusercontent.com/1282659/29491604-7693a3b4-8525-11e7-876d-3cb94d0bba18.png)
 
+### Top Rated
 ![toprated2](https://user-images.githubusercontent.com/1282659/29491599-5f1ce952-8525-11e7-82ad-7e01383cd5b1.png)
 ![toprated](https://user-images.githubusercontent.com/1282659/29491600-6340f186-8525-11e7-941b-257addf2e7e6.png)
 
