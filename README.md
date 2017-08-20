@@ -12,17 +12,17 @@ This project requires the following skils from Lesson 1 - 4.
 * Progress bar, menu, json
 
 By default (without api key) this code is expected to produced a display of progress, then network error.
-![ScreenShot](http://ctyeung.com/mobile/udacity/networkError.png)
-![ScreenShot](http://ctyeung.com/mobile/udacity/progress.png)
+![networkerror](https://user-images.githubusercontent.com/1282659/29491595-3e8f8528-8525-11e7-95f9-4dd5986bf8ea.png)
+![progress](https://user-images.githubusercontent.com/1282659/29491593-336a1d34-8525-11e7-9070-9b86e7fdbe31.png)
 
 With a valid api key
 1. Upon launch, present the user with an grid arrangement of movie posters
 2. Allow your user to change sort order via a setting (most popular, or by top rated)
-![ScreenShot](http://ctyeung.com/mobile/udacity/popular.png)
-![ScreenShot](http://ctyeung.com/mobile/udacity/popular2.png)
+![popular2](https://user-images.githubusercontent.com/1282659/29491603-745c4b32-8525-11e7-8ad9-2505fe8b2ce9.png)
+![popular](https://user-images.githubusercontent.com/1282659/29491604-7693a3b4-8525-11e7-876d-3cb94d0bba18.png)
 
-![ScreenShot](http://ctyeung.com/mobile/udacity/topRated.png)
-![ScreenShot](http://ctyeung.com/mobile/udacity/topRated2.png)
+![toprated2](https://user-images.githubusercontent.com/1282659/29491599-5f1ce952-8525-11e7-82ad-7e01383cd5b1.png)
+![toprated](https://user-images.githubusercontent.com/1282659/29491600-6340f186-8525-11e7-941b-257addf2e7e6.png)
 
 3. Allow the user to tap on a movie poster and transition to a details screen with additional information such as:
    a. original title
@@ -30,8 +30,8 @@ With a valid api key
    c. A plot synopsis (called overview in the api)
    d. user rating (called vote_average in the api)
    e. release date
-![ScreenShot](http://ctyeung.com/mobile/udacity/detail.png)
-![ScreenShot](http://ctyeung.com/mobile/udacity/detail2.png)
+![detail2](https://user-images.githubusercontent.com/1282659/29491596-4d9b1e88-8525-11e7-92ce-d6b881489901.png)
+![detail](https://user-images.githubusercontent.com/1282659/29491582-0ac14a06-8525-11e7-83d5-0f0177511623.png)
 
 ### Summary
 1. Developed and tested on Pixel Simulation android.
