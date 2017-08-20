@@ -28,14 +28,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Callback;
-import android.content.Context;
-import android.widget.Toast;
 import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 import com.ctyeung.projectpopularmoviesstage1.utilities.MovieHelper;
 
-public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHolder> {
+public class MovieGridAdapter extends RecyclerView.Adapter<MovieGridAdapter.NumberViewHolder> {
 
-    private static final String TAG = GreenAdapter.class.getSimpleName();
+    private static final String TAG = MovieGridAdapter.class.getSimpleName();
     final private ListItemClickListener mOnClickListener;
 
 
@@ -48,7 +46,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         void onListItemClick(int clickItemIndex);
     }
 
-    public GreenAdapter(int numberOfItems, ListItemClickListener listener, JSONArray jsonArray) {
+    public MovieGridAdapter(int numberOfItems, ListItemClickListener listener, JSONArray jsonArray) {
         mJsonArray = jsonArray;
         mNumberItems = numberOfItems;
         mOnClickListener = listener;
@@ -112,12 +110,7 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
         holder.bind(position);
     }
 
-    /**
-     * This method simply returns the number of items to display. It is used behind the scenes
-     * to help layout our Views and for animations.
-     *
-     * @return The number of items available
-     */
+
     @Override
     public int getItemCount() {
         return mNumberItems;
@@ -128,18 +121,10 @@ public class GreenAdapter extends RecyclerView.Adapter<GreenAdapter.NumberViewHo
      */
     class NumberViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        // Will display the position in the list, ie 0 through getItemCount() - 1
+
         TextView viewHolderName;
-        // Will display which ViewHolder is displaying this data
         ImageView viewHolderImage;
 
-        /**
-         * Constructor for our ViewHolder. Within this constructor, we get a reference to our
-         * TextViews and set an onClickListener to listen for clicks. Those will be handled in the
-         * onClick method below.
-         * @param itemView The View that you inflated in
-         *                 {@link GreenAdapter#onCreateViewHolder(ViewGroup, int)}
-         */
         public NumberViewHolder(View itemView) {
             super(itemView);
 

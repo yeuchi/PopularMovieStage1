@@ -4,14 +4,12 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,12 +23,12 @@ import com.ctyeung.projectpopularmoviesstage1.utilities.NetworkUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity implements GreenAdapter.ListItemClickListener
+public class MainActivity extends AppCompatActivity implements MovieGridAdapter.ListItemClickListener
 {
-    private GreenAdapter mAdapter;
+    private MovieGridAdapter mAdapter;
     private RecyclerView mNumbersList;
     private Toast mtoast;
-    private GreenAdapter.ListItemClickListener listener;
+    private MovieGridAdapter.ListItemClickListener listener;
     private JSONArray jsonArray;
     private ProgressBar mLoadingIndicator;
     private TextView tv_network_error_display;
@@ -122,7 +120,7 @@ public class MainActivity extends AppCompatActivity implements GreenAdapter.List
 
                 if(null!=jsonArray && size>0)
                 {
-                    mAdapter = new GreenAdapter(size, listener, jsonArray);
+                    mAdapter = new MovieGridAdapter(size, listener, jsonArray);
                     mNumbersList.setAdapter(mAdapter);
                     mNumbersList.setHasFixedSize(true);
                 }
