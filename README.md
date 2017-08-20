@@ -2,7 +2,7 @@
 Android class first assignment
 
 ### Abstract
-This project requires the following skils from Lesson 1 - 4.
+This project utilizes the following skils from Lesson 1 - 4.
 * Picasso to load images http://square.github.io/picasso/
 * Movie db service https://www.themoviedb.org/?_dc=1503193705
 * Recyclerview
@@ -37,7 +37,7 @@ With a valid api key
 ![detail](https://user-images.githubusercontent.com/1282659/29491582-0ac14a06-8525-11e7-83d5-0f0177511623.png)
 
 ### Summary
-1. Developed and tested on Pixel Simulation android.
+1. Developed and tested on Google Android Pixel, Simulation.
 2. Basic functionality with no thrills nor details for different form factor.
 
 ### Appendix
