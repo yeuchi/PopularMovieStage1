@@ -6,7 +6,7 @@ package com.ctyeung.projectpopularmoviesstage1.utilities;
 
 public class MovieHelper {
     final public static String BASE_URL = "http://api.themoviedb.org/3/movie/";
-    final public static String API_KEY_VALUE = "MY API KEY HERE !!!!";
+    final public static String API_KEY_VALUE = "838bb81a894bc77678913ab8b239cfb3";
     final public static String PARAM_API_KEY = "api_key";
 
     public static final String SORT_POPULAR = "popular";

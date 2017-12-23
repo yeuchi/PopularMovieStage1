@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ctyeung.projectpopularmoviesstage1.utilities.JSONhelper;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import com.ctyeung.projectpopularmoviesstage1.utilities.MovieHelper;
@@ -39,25 +40,25 @@ public class DetailActivity extends AppCompatActivity {
     protected void initializeElements()
     {
         String str = this.getIntent().getStringExtra(Intent.EXTRA_TEXT);
-        JSONObject json = parseJson(str);
+        JSONObject json = JSONhelper.parseJson(str);
 
-        String voteAverage = parseValueByKey(json, MovieHelper.KEY_VOTE_AVERAGE);
+        String voteAverage = JSONhelper.parseValueByKey(json, MovieHelper.KEY_VOTE_AVERAGE);
         tv_rating.setText("Vote Average: " + voteAverage);
 
-        String date = parseValueByKey(json, MovieHelper.KEY_RELEASE_DATE);
+        String date = JSONhelper.parseValueByKey(json, MovieHelper.KEY_RELEASE_DATE);
         tv_release_date.setText("Date: " + date);
 
-        String plot = parseValueByKey(json, MovieHelper.KEY_PLOT);
+        String plot = JSONhelper.parseValueByKey(json, MovieHelper.KEY_PLOT);
         tvPlot.setText("Plot: " + plot);
 
-        String title = parseValueByKey(json, MovieHelper.KEY_ORIGINAL_TITLE);
+        String title = JSONhelper.parseValueByKey(json, MovieHelper.KEY_ORIGINAL_TITLE);
         tvTitle.setText("Title: " + title);
 
         Context context = getApplicationContext();
 
         String url = MovieHelper.BASE_POSTER_URL +
                     MovieHelper.getSizeByIndex(MovieHelper.INDEX_DETAIL) +
-                    parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
+                    JSONhelper.parseValueByKey(json, MovieHelper.KEY_POSTER_PATH);
 
         Picasso.with(context)
                 //.load("http://i.imgur.com/DvpvklR.png")
@@ -76,35 +77,5 @@ public class DetailActivity extends AppCompatActivity {
                     }
                 });
 
-    }
-
-    protected JSONObject parseJson(String str)
-    {
-        JSONObject json = null;
-
-        try
-        {
-            json = new JSONObject(str);
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        return json;
-    }
-
-    protected  String parseValueByKey(JSONObject json, String key)
-    {
-        String str = null;
-
-        try
-        {
-            str = json.getString(key);
-        }
-        catch (Exception ex)
-        {
-            ex.printStackTrace();
-        }
-        return str;
     }
 }
