@@ -1,5 +1,6 @@
 # PopularMovieStage1
-Android class first assignment
+Android class first assignment \
+Google Play : https://play.google.com/store/apps/details?id=com.ctyeung.popularmoviestage2
 
 ### Abstract
 This project utilizes the following skils from Lesson 1 - 4.
